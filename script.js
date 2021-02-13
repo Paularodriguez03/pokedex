@@ -57,7 +57,7 @@ const createPokemonCard = (pokemon) => {
     //a esta mismo se le asigna la clase pokemon
 
 
-    const src =  pokemon.sprites.other.dream_world.front_default;
+    // const src =  pokemon.sprites.other.dream_world.front_default;
     const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1)
     //en la contante nombre se llama desde la api la infromacion del nombre del pokemon 
     //la letra que este en el puesto o de los nombre va a estar en mayuscula 
@@ -85,7 +85,7 @@ const createPokemonCard = (pokemon) => {
     //Se crean elementos a renderizar en el html que llaman la info de la API
     const pokemonInnerHTML = `
     <div class="img-container">
-        <img src="${src}" alt="">
+    <img src="https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png" alt=""> 
     </div>
     <div class="info">
         <span class="number">#${id}</span>
@@ -93,6 +93,7 @@ const createPokemonCard = (pokemon) => {
         <small class="type">Type: <span>${type}</span> </small>
     </div>
     `
+    //<img src="${src}" alt="">
     //<img src="https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png" alt="">
     //las imagenes son traidas desde otra API
     // en esta imagne se trage una url de img y se remplaza el numero por el id para que sea 
